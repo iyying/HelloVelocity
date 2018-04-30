@@ -19,13 +19,15 @@ public class HelloVelocity {
         ve.init();
         // 获取模板文件
         Template t = ve.getTemplate("hellovelocity.vm");
+
         // 设置变量
         VelocityContext ctx = new VelocityContext();
-        ctx.put("name", "Velocity");
+        ctx.put("name", "拒大侠");
         List list = new ArrayList();
         list.add("1");
         list.add("2");
         ctx.put("list", list);
+
         // 输出
         StringWriter sw = new StringWriter();
         t.merge(ctx, sw);
